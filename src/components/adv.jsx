@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {useEffect} from "react";
 
 const Box = styled.ul`
     display: flex;

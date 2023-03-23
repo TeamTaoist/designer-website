@@ -31,10 +31,10 @@ const UlBox = styled.div`
 export default function Footer(){
     return <Box>
         <UlBox>
-            <li> <a href="https://twitter.com/Designer__team" target="_blank">
+            <li> <a href="https://twitter.com/Designer__team" target="_blank" rel="noreferrer">
                 <img src={TwitterImg} alt=""/>
             </a></li>
-            <li><a href="https://github.com/TeamTaoist/Designer" target="_blank">
+            <li><a href="https://github.com/TeamTaoist/Designer" target="_blank" rel="noreferrer">
                 <img src={GithubImg} alt=""/>
             </a></li>
         </UlBox>
