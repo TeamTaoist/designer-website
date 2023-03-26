@@ -98,7 +98,9 @@ const Btn = styled.div`
       box-shadow: 0 0 0 0 rgba(0, 159, 153, 0);
     }
   }
-
+  @media (max-width: 1279px) {
+    left: 50%;
+  }
   
 `
 export default function MidBg(){

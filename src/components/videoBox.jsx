@@ -27,7 +27,11 @@ const Box = styled.div`
   justify-content: center;
   position: relative;
   overflow: hidden;
-  
+  @media (max-width: 1279px) {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+  }
 `
 
 const VideoBoxBg = styled.div`
@@ -46,6 +50,14 @@ const CloseBox = styled.div`
   cursor: pointer;
   img{
     width: 40px;
+  }
+
+  @media (max-width: 1279px) {
+    right: 10px;
+    top: 10px;
+    img{
+      margin: 0!important;
+    }
   }
 `
 
