@@ -23,6 +23,9 @@ const Box = styled.div`
   padding: 56px 80px;
   display: flex;
   flex-direction: column;
+  @media (max-width: 1279px) {
+    width: 100vw;
+  }
 `
 
 const CloseBox = styled.div`
@@ -48,6 +51,11 @@ const NavUl = styled.ul`
         padding-left: 10px;
       }
     }
+  @media (max-width: 1279px) {
+   li{
+     font-size: 24px;
+   }
+  }
 `
 
 const BtmBox = styled.div`
@@ -100,7 +108,7 @@ export default function SideBar(props){
             </CloseBox>
             <NavUl>
                 <li onClick={()=>toGo()}>01.<span>Home</span></li>
-                <li onClick={()=>toGo("#video")}>02.<span>video</span></li>
+                <li onClick={()=>toGo("#videoInner")}>02.<span>video</span></li>
                 <li onClick={()=>toGo("#overview")}>03.<span>Overview</span></li>
                 <li onClick={()=>toGo("#Technology")}>04.<span>Technology</span></li>
                 <li onClick={()=>toGo("#Team")}>05.<span>Team</span></li>

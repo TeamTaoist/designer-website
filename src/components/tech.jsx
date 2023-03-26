@@ -8,9 +8,17 @@ const Box = styled.div`
   display: flex;
   align-items: stretch;
   justify-content: space-between;
+  @media (max-width: 1279px) {
+    flex-direction: column;
+    margin: 0 auto;
+  }
 `
 const LftBox = styled.div`
     width: 50%;
+  @media (max-width: 1279px) {
+    width: 100%;
+    order: 2;
+  }
 `
 
 const IntroBox = styled.div`
@@ -31,12 +39,23 @@ const IntroBox = styled.div`
     color: #797979;
     line-height: 2em;
   }
+  @media (max-width: 1279px) {
+    font-size: 16px;
+    padding-top: 10px;
+    .tips{
+      font-size: 20px;
+    }
+  }
 `
 
 const RhtBox = styled.div`
     width: 50%;
   position: relative;
+  
   img{
+    width: 100%;
+  }
+  @media (max-width: 1279px) {
     width: 100%;
   }
 `

@@ -10,6 +10,15 @@ const Box = styled.div`
   background: #000;
   padding: 100px 0;
   position: relative;
+  @media (max-width: 1279px) {
+    padding: 0;
+    img{
+      width: 90%;
+      margin: 50px 0;
+      text-align: center;
+      padding-left: 5%;
+    }
+  }
 `
 
 const Btn = styled.div`
@@ -89,9 +98,13 @@ const Btn = styled.div`
       box-shadow: 0 0 0 0 rgba(0, 159, 153, 0);
     }
   }
+
+  
 `
 export default function MidBg(){
     const [ show,setShow] = useState(false);
+
+    const flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
 
     const closeModal = () =>{
         setShow(false);
@@ -100,12 +113,12 @@ export default function MidBg(){
         setShow(true);
     }
 
-    return <Box id="video">
+    return <Box id="videoInner">
         {
             show &&<VideoBox closeModal={closeModal} />
         }
 
-        <div className="wow animate__animated animate__bounceInLeft" data-wow-offset="400">
+        <div className="wow animate__animated animate__bounceInLeft" data-wow-offset={flag?"0":"400"}>
             <Btn onClick={()=>handleShow()}>
                 <i>▶</i>
             </Btn>

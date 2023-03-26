@@ -20,6 +20,12 @@ const IntroBox = styled.div`
     text-transform: uppercase;
 
   }
+  @media (max-width: 1279px) {
+    font-size: 16px;
+    .tips{
+      font-size: 20px;
+    }
+  }
 `
 const Content = styled.div`
   margin-top: 20px;

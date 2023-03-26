@@ -8,8 +8,9 @@ const Box = styled.div`
   height: 100vh;
 `
 export default function Second(){
+    const flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
     const distortion_uniforms = {
-        uDistortionX: new THREE.Uniform(new THREE.Vector2(80, 3)),
+        uDistortionX: new THREE.Uniform(new THREE.Vector2(flag?20:80, 3)),
         uDistortionY: new THREE.Uniform(new THREE.Vector2(-40, 2.5))
     };
 

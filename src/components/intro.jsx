@@ -24,6 +24,13 @@ const IntroBox = styled.div`
     font-family: "Lato-Light";
     text-transform: uppercase;
   }
+
+  @media (max-width: 1279px) {
+    font-size: 16px;
+    .tips{
+      font-size: 20px;
+    }
+  }
 `
 const SwiperBox = styled.div`
   width: 100%;
@@ -142,6 +149,8 @@ export default function Intro(){
         }
     ]);
 
+    const flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+
     return <Box>
         <IntroBox>
             Introduction
@@ -152,7 +161,7 @@ export default function Intro(){
         <SwiperBox>
             <Swiper
                 spaceBetween={20}
-                slidesPerView={3}
+                slidesPerView={flag?1:3}
                 // pagination={{ clickable: true }}
                 pagination={{
                     bulletClass: "normal",

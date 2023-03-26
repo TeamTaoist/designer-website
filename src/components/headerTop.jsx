@@ -8,7 +8,7 @@ import {useState} from "react";
 const FirstLine = styled.div`
     display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 20px;
   position: absolute;
   left: 0;
@@ -19,21 +19,28 @@ const FirstLine = styled.div`
 const RhtBox = styled.div`
     border: 2px solid #fff;
   border-radius: 50px;
-  padding: 10px 0;
+  padding: 10px 20px;
   font-size: 16px;
   font-family: "bold";
   text-align: center;
   color: #fff;
   text-transform: uppercase;
-  width:150px;
   white-space: nowrap;
   box-sizing: border-box;
-  margin-right: 20px;
   cursor: pointer;
+
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  @media (max-width: 1279px) {
+    font-size:12px;
+    padding: 10px;
+  }
 `
 const Lft = styled.div`
-    width: 150px;
-  padding-left: 20px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
   img{
     cursor: pointer;
   }
@@ -43,7 +50,11 @@ const MidBox = styled.div`
     .logo{
       height: 80px;
     }
-  
+  @media (max-width: 1279px) {
+    .logo{
+      height: 40px;
+    }
+  }
   
 `
 const Tips = styled.div`
@@ -58,6 +69,9 @@ const Ltitle = styled.div`
   //text-transform: uppercase;
   margin-top: 20px;
   color: #Fff;
+  @media (max-width: 1279px) {
+    font-size: 36px;
+  }
 `
 
 export default function HeaderTop(){

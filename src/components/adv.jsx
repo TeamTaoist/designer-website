@@ -6,7 +6,7 @@ const Box = styled.ul`
   justify-content: space-between;
   width: 80%;
   margin: 50px auto 100px;
-  
+  flex-wrap: wrap;
   li{
     width: calc( (100% - 75px) / 4);
     margin-right: 25px;
@@ -42,6 +42,17 @@ const Box = styled.ul`
   .tips{
     font-size: 12px;
     margin-top: 20px;
+  }
+  @media (max-width: 1279px) {
+    width: 100%;
+    margin: 0;
+    li{
+      width: 90%;
+      margin: 40px auto;
+      &:last-child{
+        margin-right: auto;
+      }
+    }
   }
 `
 export default function Adv(){

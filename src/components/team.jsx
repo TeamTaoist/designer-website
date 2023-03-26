@@ -20,6 +20,12 @@ const IntroBox = styled.div`
     text-transform: uppercase;
 
   }
+  @media (max-width: 1279px) {
+    font-size: 16px;
+    .tips{
+      font-size: 20px;
+    }
+  }
 `
 const Content = styled.div`
   width: 80%;
@@ -38,6 +44,17 @@ const UlBox = styled.ul`
   img{
     width: 100%;
   }
+
+  @media (max-width: 1279px) {
+    flex-wrap: wrap;
+    li{
+      width: 90%;
+      margin: 0 auto 40px;
+      &:last-child{
+        margin-right: auto;
+      }
+    }
+  }
 `
 const NameBox = styled.div`
     margin-top: 20px;
@@ -51,11 +68,23 @@ const NameBox = styled.div`
   .po{
     font-size: 16px;
   }
+  @media (max-width: 1279px) {
+    .nameTop{
+      font-size: 16px;
+    }
+    .po{
+      font-size: 12px;
+    }
+  }
 `
 
 export default function Team(){
+
+    const flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+
+
     return <Box id="Team">
-        <IntroBox  className="wow animate__animated animate__bounceInLeft" data-wow-offset="400">
+        <IntroBox  className="wow animate__animated animate__bounceInLeft" data-wow-offset={flag?"0":"400"}>
             Team
             <div className="tips">
                 Our team of designer
@@ -64,7 +93,7 @@ export default function Team(){
         <Content>
             <UlBox>
 
-                <li className="wow animate__animated animate__fadeInLeft" data-wow-offset="400">
+                <li className="wow animate__animated animate__fadeInLeft" data-wow-offset={flag?"0":"400"}>
                     <div>
                         <img src={DemoImg} alt=""/>
                     </div>
@@ -73,7 +102,7 @@ export default function Team(){
                         <div className="po">Front End Developer</div>
                     </NameBox>
                 </li>
-                <li className="wow animate__animated animate__fadeInLeft" data-wow-offset="400" data-wow-delay="0.2s">
+                <li className="wow animate__animated animate__fadeInLeft" data-wow-offset={flag?"0":"400"} data-wow-delay="0.2s">
                     <div>
                         <img src={DemoImg} alt=""/>
                     </div>
@@ -82,7 +111,7 @@ export default function Team(){
                         <div className="po">Front End Developer</div>
                     </NameBox>
                 </li>
-                <li className="wow animate__animated animate__fadeInLeft" data-wow-offset="400" data-wow-delay="0.4s">
+                <li className="wow animate__animated animate__fadeInLeft" data-wow-offset={flag?"0":"400"} data-wow-delay="0.4s">
                     <div>
                         <img src={DemoImg} alt=""/>
                     </div>
