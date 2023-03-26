@@ -10,7 +10,7 @@ import {useState} from "react";
 
 const Box = styled.div`
   width: 80%;
-  margin: 150px auto;
+  margin: 100px auto;
   
 `
 const IntroBox = styled.div`

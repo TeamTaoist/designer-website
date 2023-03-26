@@ -28,7 +28,7 @@ const Content = styled.div`
 `
 
 export default function Overview(){
-    return <Box className="wow animate__animated animate__zoomIn" data-wow-offset="500">
+    return <Box id="overview" className="wow animate__animated animate__zoomIn" data-wow-offset="500">
         <IntroBox>
             Overview
             <div className="tips">

@@ -3,7 +3,7 @@ import Bgimg from "../assets/images/blog-bg.jpg";
 import RhtImg from "../assets/images/flow.png";
 
 const Box = styled.div`
-  margin: 100px auto;
+  margin: 100px auto 0;
   background: url(${Bgimg});
   display: flex;
   align-items: stretch;
@@ -41,7 +41,7 @@ const RhtBox = styled.div`
   }
 `
 export default function Tech(){
-    return <Box>
+    return <Box id="Technology">
         <LftBox>
             <IntroBox>
                 Our Technology

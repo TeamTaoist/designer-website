@@ -12,6 +12,8 @@ import Footer from "./components/footer";
 import {useEffect} from "react";
 import { WOW } from 'wowjs';
 import "animate.css";
+import Team from "./components/team";
+import Timeline from "./components/timeline";
 // import Banner from "./components/banner";
 
 const Box = styled.div`
@@ -51,6 +53,8 @@ function App() {
               <MidBg />
               <Overview />
               <Tech />
+              <Team />
+              <Timeline />
               <Intro />
               <Footer />
           </Box>

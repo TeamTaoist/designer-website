@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import LogoImg from "../assets/images/logo.png";
 import ReactRotatingText from "react-rotating-text";
+import TopImg from "../assets/images/topNav.svg";
+import SideBar from "./sideBar";
+import {useState} from "react";
 
 const FirstLine = styled.div`
     display: flex;
@@ -25,9 +28,15 @@ const RhtBox = styled.div`
   width:150px;
   white-space: nowrap;
   box-sizing: border-box;
+  margin-right: 20px;
+  cursor: pointer;
 `
 const Lft = styled.div`
     width: 150px;
+  padding-left: 20px;
+  img{
+    cursor: pointer;
+  }
 `
 const MidBox = styled.div`
     text-align: center;
@@ -53,8 +62,24 @@ const Ltitle = styled.div`
 
 export default function HeaderTop(){
 
+    const [show,setShow] = useState(false);
+
+    const handleShow = () =>{
+        setShow(true);
+    }
+
+    const handleCLose = () =>{
+        setShow(false);
+    }
+
     return <FirstLine>
-        <Lft></Lft>
+        {
+            show &&<SideBar handleCLose={handleCLose}/>
+        }
+
+        <Lft>
+            <img src={TopImg} alt="" onClick={()=>handleShow()}/>
+        </Lft>
         <MidBox>
             <div>
                 <img src={LogoImg} alt="" className="logo"/>

@@ -89,7 +89,7 @@ const Btn = styled.div`
   }
 `
 export default function MidBg(){
-    return <Box>
+    return <Box id="video">
         <div className="wow animate__animated animate__bounceInLeft" data-wow-offset="400">
             <Btn>
                 <i>▶</i>

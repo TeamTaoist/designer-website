@@ -6,6 +6,7 @@ const Box = styled.ul`
   justify-content: space-between;
   width: 80%;
   margin: 50px auto 100px;
+  
   li{
     width: calc( (100% - 75px) / 4);
     margin-right: 25px;
