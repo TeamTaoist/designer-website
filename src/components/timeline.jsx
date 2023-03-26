@@ -309,7 +309,7 @@ export default function Timeline(){
                     <li className="timeline-event-years-6-5 timeline-event-legend">
 		<span>
 			<i></i>
-			<h2>Graduation</h2>
+			<h2>Start</h2>
 			<h3>AAA</h3>
 			<h4>Visual</h4>
 		</span>
