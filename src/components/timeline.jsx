@@ -297,8 +297,8 @@ const LineBox = styled.div`
 `
 
 export default function Timeline(){
-    return <Box>
-        <MainBox>
+    return <Box id="Roadmap">
+        <MainBox  className="wow animate__animated animate__bounceInLeft" data-wow-offset="600">
             <IntroBox>
                 <div className="tips">
                     Roadmap

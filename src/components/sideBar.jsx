@@ -104,6 +104,7 @@ export default function SideBar(props){
                 <li onClick={()=>toGo("#overview")}>03.<span>Overview</span></li>
                 <li onClick={()=>toGo("#Technology")}>04.<span>Technology</span></li>
                 <li onClick={()=>toGo("#Team")}>05.<span>Team</span></li>
+                <li onClick={()=>toGo("#Roadmap")}>06.<span>Roadmap</span></li>
             </NavUl>
             <BtmBox>
                 <UlBox>

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import AboutImg from "../assets/images/about-img.png";
+import VideoBox from "./videoBox";
+import {useState} from "react";
 
 const Box = styled.div`
   display: flex;
@@ -89,9 +91,22 @@ const Btn = styled.div`
   }
 `
 export default function MidBg(){
+    const [ show,setShow] = useState(false);
+
+    const closeModal = () =>{
+        setShow(false);
+    }
+    const handleShow = () =>{
+        setShow(true);
+    }
+
     return <Box id="video">
+        {
+            show &&<VideoBox closeModal={closeModal} />
+        }
+
         <div className="wow animate__animated animate__bounceInLeft" data-wow-offset="400">
-            <Btn>
+            <Btn onClick={()=>handleShow()}>
                 <i>▶</i>
             </Btn>
             <img src={AboutImg} alt=""/>
